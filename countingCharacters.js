@@ -17,3 +17,23 @@ function countingCharacters2(stringToCount, characterToFind) {
 	console.log("Character to find; " + characterToFind);
 	console.log("Number of times the character apears: " + characterCount);
 }
+//str - string to search
+//search - charcters to find in str
+function countingCharacters3(str, search) {
+	var count = 0; //number of 'search' found
+	var numChars = search.length;
+	var lastIndex = str.length - numChars;
+	//loop will go through the string searching for 'search' characters
+	for(var index = 0; index <= lastIndex; index++) {
+		var current = str.substring(index, index + numChars);
+		if (current == search) {
+			count++;
+		}
+	}
+	console.log("String to search in: " + str);
+	console.log("Charcter to find: " + search);
+	console.log("Number of times the character appears: " + count);
+}
+	
+	
+	
